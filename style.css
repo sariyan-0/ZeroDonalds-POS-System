@@ -1,0 +1,149 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #fff8f8, #ffeaea);
+    text-align: center;
+    padding: 40px;
+    margin: 0;
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 3rem;
+    color: #d40000;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px #ffb3b3;
+  }
+  
+  #menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: 0 auto 50px;
+    padding: 0 20px;
+  }
+  
+  .item {
+    background: white;
+    border: none;
+    border-radius: 16px;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #d40000;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+    transition: 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .item::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 0, 0, 0.1);
+    width: 100%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    transition: height 0.3s ease;
+    z-index: 0;
+  }
+  
+  .item:hover::before {
+    height: 100%;
+  }
+  
+  .item:hover {
+    transform: scale(1.05);
+    color: #a60000;
+  }
+  
+  .item span {
+    font-size: 26px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #cart {
+    list-style: none;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 400px;
+    text-align: left;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  #cart li {
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-left: 5px solid #d40000;
+    background: #fafafa;
+    border-radius: 8px;
+    font-size: 18px;
+  }
+  
+  #total {
+    font-size: 26px;
+    margin: 30px 0 15px;
+    font-weight: bold;
+    color: #222;
+  }
+  
+  #checkout {
+    background-color: #d40000;
+    color: white;
+    padding: 15px 35px;
+    font-size: 22px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 5px 12px rgba(212, 0, 0, 0.3);
+    transition: 0.2s ease-in-out;
+  }
+  
+  #checkout:hover {
+    background-color: #a60000;
+    transform: scale(1.05);
+  }
+  #cart li {
+    margin: 10px 0;
+    padding: 12px 15px;
+    border-left: 5px solid #d40000;
+    background: #fafafa;
+    border-radius: 8px;
+    font-size: 18px;
+    transform-origin: center;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+  .piece {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #d40000;
+    border-radius: 50%;
+    pointer-events: none;
+    animation: explode 0.7s forwards;
+    z-index: 9999;
+  }
+  
+  @keyframes explode {
+    to {
+      opacity: 0;
+      transform: translate(var(--x), var(--y)) scale(0);
+    }
+  }
+  .piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #d40000;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+  }
+    
+  
